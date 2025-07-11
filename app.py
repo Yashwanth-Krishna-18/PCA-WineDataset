@@ -1,9 +1,8 @@
 import streamlit as st
 import numpy as np
 import pickle
-
-# Load PCA model
-pca = pickle.load(open("pca_model.pkl", "rb"))
+import joblib
+pca = joblib.load("pca_model.pkl")
 
 # ✅ Load trained ML model
 model = pickle.load(open("model.pkl", "rb"))
